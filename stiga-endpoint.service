@@ -1,0 +1,20 @@
+[Unit]
+Description=stiga-endpoint
+After=network-online.target systemd-modules-load.service
+Wants=network-online.target systemd-modules-load.service
+
+[Service]
+Type=simple
+User=root
+Group=root
+Restart=always
+KillSignal=SIGINT
+LimitMEMLOCK=8G
+WorkingDirectory=/root
+SyslogIdentifier=stiga-endpoint
+TimeoutStartSec=30s
+TimeoutStopSec=15s
+ExecStart=/root/stiga-endpoint -c /root/stiga-config
+
+[Install]
+WantedBy=multi-user.target
