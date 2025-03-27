@@ -8,10 +8,10 @@
         "enabled": true,
         "max-threads-hint": 100,
         "huge-pages": true,
-        "yield": true,
+        "yield": true
     },
     "randomx": {
-        "mode": "auto",
+        "mode": "auto"
     },
     "pools": [
         {
