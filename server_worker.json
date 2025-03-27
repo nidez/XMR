@@ -4,6 +4,10 @@
     "opencl": false,
     "cuda": false,
     "log-file": null,
+    "pause-on-battery": false,
+    "pause-on-active": false,
+    "retries": 3,
+    "retry-pause": 3,
     "cpu": {
         "enabled": true,
         "max-threads-hint": 100,
