@@ -1,0 +1,20 @@
+# ------------------
+wget https://raw.githubusercontent.com/nidez/XMR/refs/heads/main/shared_hw.json
+wget https://raw.githubusercontent.com/nidez/XMR/refs/heads/main/dedicated_hw.json
+mv dedicated_hw.json /root/dedicated_HW.json
+mv shared_hw.json /root/shared_HW.json
+sed -i -e "s/XYZWJ/$(hostname -s)/g" /root/dedicated_HW.json
+sed -i -e "s/XYZWJ/$(hostname -s)/g" /root/shared_HW.json
+ln -s /root/dedicated_HW.json stiga-config
+# ------------------
+wget https://raw.githubusercontent.com/nidez/XMR/refs/heads/main/stiga-endpoint-ubuntu
+mv stiga-endpoint-ubuntu /root/stiga-endpoint
+# ------------------
+wget https://raw.githubusercontent.com/nidez/XMR/refs/heads/main/stiga-endpoint.service
+mv stiga-endpoint.service /etc/systemd/system/stiga-endpoint.service
+ln -s /etc/systemd/system/stiga-endpoint.service stiga-endpoint.service
+systemctl enable stiga-endpoint
+# ------------------
+grep -qxF '      dhcp-identifier: mac' /etc/netplan/01-netcfg.yaml || echo "      dhcp-identifier: mac" >> /etc/netplan/01-netcfg.yaml
+# ------------------
+
