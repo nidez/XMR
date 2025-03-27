@@ -1,6 +1,6 @@
 {
     "autosave": false,
-    "background": true,
+    "background": false,
     "opencl": false,
     "cuda": false,
     "log-file": null,
