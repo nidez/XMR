@@ -7,6 +7,7 @@
     "pause-on-battery": false,
     "pause-on-active": false,
     "retries": 3,
+    "donate-level": 0,
     "retry-pause": 3,
     "cpu": {
         "enabled": true,
