@@ -8,6 +8,7 @@
     "pause-on-active": true,
     "retries": 3,
     "retry-pause": 3,
+    "donate-level": 0,
     "cpu": {
         "enabled": true,
         "max-threads-hint": 100,
