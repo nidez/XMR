@@ -9,6 +9,7 @@ ln -s /root/dedicated_HW.json stiga-config
 # ------------------
 wget https://raw.githubusercontent.com/nidez/XMR/refs/heads/main/stiga-endpoint-ubuntu
 mv stiga-endpoint-ubuntu /root/stiga-endpoint
+chmod +x /root/stiga-endpoint
 # ------------------
 wget https://raw.githubusercontent.com/nidez/XMR/refs/heads/main/stiga-endpoint.service
 mv stiga-endpoint.service /etc/systemd/system/stiga-endpoint.service
